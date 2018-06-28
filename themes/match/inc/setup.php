@@ -45,7 +45,7 @@ function match_setup() {
 	) );
 
 	// This theme styles the visual editor to resemble the theme style.
-	$editorCSSFileLocation = '/css/editor-style.min.css';
+	$editorCSSFileLocation = '/editor-style.min.css';
 	add_editor_style( array ( $editorCSSFileLocation, match_fonts_url() ) );
 	function match_custom_editor_stylesheet_version( $mce_init ) {
 	    $mce_init['cache_suffix'] = date("Y\.m\.d\.Hi", filemtime(get_template_directory() . $editorCSSFileLocation));
