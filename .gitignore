@@ -17,3 +17,8 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+plugins/enable-media-replace/
+themes/twentyseventeen/
+uploads/
+plugins/index.php
+package-lock.json
