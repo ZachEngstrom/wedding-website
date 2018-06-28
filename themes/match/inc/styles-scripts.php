@@ -71,7 +71,7 @@ function custom_styles() {
 	$top_styles = array(
 	    //'match-fontawesome' => '/css/font-awesome.css',
 	    'match-fonts'       => match_fonts_url(),
-	    'match-style'       => '/style.css'
+	    'match-style'       => '/css/style.css'
 	);
 
 	foreach ($top_styles as $handle => $src) {
