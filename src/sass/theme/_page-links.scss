@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+11.3 Page Links
+--------------------------------------------------------------*/
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.format-gallery .page-links {
+  margin: 1.5em 0;
+}
+
+.page-links {
+  a {
+    background: #fff;
+    border: 1px solid $color-dk-purple;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 2px 0 0;
+    padding: 2px 8px;
+    text-align: center;
+    background: $color-dk-purple;
+    border: 1px solid $color-dk-purple;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      background: #fff;
+      border: 1px solid $color-dk-purple;
+      color: #333;
+    }
+  }
+  > span {
+    background: #fff;
+    border: 1px solid $color-dk-purple;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 2px 0 0;
+    padding: 2px 8px;
+    text-align: center;
+  }
+  > .page-links-title {
+    border: none;
+    margin: 0;
+    padding: 0 7px 0 0;
+  }
+}

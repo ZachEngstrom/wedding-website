@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+11.5 Entry Meta
+--------------------------------------------------------------*/
+
+.entry-meta {
+  color: #999;
+  a {
+    color: #999;
+    &:visited, &:hover, &:focus, &:active {
+      color: #999;
+    }
+  }
+}
+
+.entry-meta-footer {
+  font-size: 13px;
+  padding: 0 50px;
+  a {
+    color: $color-dk-purple;
+    &:visited {
+      color: $color-dk-purple;
+    }
+    &:hover, &:focus, &:active {
+      color: #fa7a7a;
+    }
+  }
+}
+
+.cat-links, .tags-links, .comments-link, .edit-link {
+  margin-right: 10px;
+}

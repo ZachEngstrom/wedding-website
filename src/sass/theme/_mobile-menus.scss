@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+5.3 Mobile Menus
+--------------------------------------------------------------*/
+
+/* Mobile Menu Core Style */
+
+.slicknav-nav {
+  clear: both;
+  ul, li {
+    display: block;
+  }
+  .slicknav-arrow {
+    font-size: 0.8em;
+    margin: 0 0 0 0.4em;
+  }
+  .slicknav-item {
+    display: block;
+    cursor: pointer;
+  }
+  a {
+    display: block;
+  }
+  .slicknav-item a {
+    display: inline;
+  }
+}
+
+.slicknav-menu {
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  font-size: 16px;
+  display: none;
+}
+
+/*
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+/* Button */
+
+.slicknav-btn-text {
+  display: none;
+}
+
+/* Button Text */
+
+.slicknav-menutext {
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #000;
+}
+
+/** Menu */
+
+.slicknav-nav {
+  background: #333333;
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 0.875em;
+  list-style: none;
+  overflow: hidden;
+  ul {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 0 20px;
+  }
+  .slicknav-item {
+    padding: 5px 10px;
+    margin: 2px 5px;
+  }
+  a {
+    padding: 5px 10px;
+    margin: 2px 5px;
+    text-decoration: none;
+    color: #fff;
+  }
+  .slicknav-item {
+    a {
+      padding: 0;
+      margin: 0;
+    }
+    &:hover {
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: #ccc;
+      color: #fff;
+    }
+  }
+  a:hover {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #ccc;
+    color: #222;
+  }
+  .slicknav-txtnode {
+    margin-left: 15px;
+  }
+}

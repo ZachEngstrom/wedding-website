@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+11.6 Media Elements
+--------------------------------------------------------------*/
+
+.hentry {
+  .mejs-container {
+    margin: 0 0 18px;
+  }
+  .mejs-mediaelement, .mejs-container .mejs-controls {
+    background: #333;
+  }
+  .mejs-controls {
+    .mejs-time-rail .mejs-time-loaded, .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+      background: #fff;
+    }
+    .mejs-time-rail {
+      .mejs-time-current {
+        background: $color-dk-purple;
+      }
+      .mejs-time-total {
+        background: rgba(255, 255, 255, 0.33);
+      }
+    }
+    .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+      background: rgba(255, 255, 255, 0.33);
+    }
+  }
+  .mejs-container .mejs-controls .mejs-time {
+    padding-top: 9px;
+  }
+  .mejs-controls {
+    .mejs-time-rail span {
+      border-radius: 0;
+    }
+    .mejs-horizontal-volume-slider {
+      .mejs-horizontal-volume-total, .mejs-horizontal-volume-current {
+        border-radius: 0;
+      }
+    }
+  }
+  .mejs-overlay-loading {
+    background: transparent;
+  }
+}

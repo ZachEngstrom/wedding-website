@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+3.1 Links
+--------------------------------------------------------------*/
+
+a {
+  color: $color-dk-purple;
+  text-decoration: none;
+  &:visited {
+    color: $color-dk-purple;
+  }
+  &:hover, &:focus, &:active {
+    color: $color-dk-purple;
+    text-decoration: underline;
+  }
+  &.btn-primary {
+    color: #fff;
+    &:visited {
+      color: #fff;
+    }
+    &:hover, &:focus, &:active {
+      color: #fff;
+    }
+  }
+}

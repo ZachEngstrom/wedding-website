@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+2.1 Global
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  //background: #fafafa;
+  //color: #666;
+  font-family: 'Open Sans', sans-serif;
+  //font-size: 14px;
+  //font-size: 1.4rem;
+  font-weight: normal;
+  //line-height: 2.0;
+}
+
+/*
+ * Sticky Footer
+ */
+html {
+  position: relative;
+  min-height: 100%;
+}

@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+11.4 More Link
+--------------------------------------------------------------*/
+
+.more-link {
+  padding: 6px 18px;
+  border: 1px solid $color-dk-purple;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  &:visited {
+    padding: 6px 18px;
+    border: 1px solid $color-dk-purple;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}

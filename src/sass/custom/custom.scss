@@ -1,0 +1,74 @@
+body.page-wedding-party {
+  .card {
+    border-color: #d2bfe0;
+    margin-bottom: 1.75rem !important;
+    border-radius: .5rem;
+    .card-header {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      &:first-child {
+        border-radius: calc(.5rem - 1px) calc(.5rem - 1px) 0 0;
+      }
+    }
+    .card-header, .card-footer {
+      background-color: #d2bfe0;
+      font-weight: bold;
+    }
+    .h2 {
+      margin: 0;
+    }
+    .card-body {
+      font-family: cursive, sans-serif;
+      text-align: center;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    .card-footer {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      &:last-child {
+        border-radius: 0 0 calc(.5rem - 1px) calc(.5rem - 1px);
+      }
+    }
+    &.card-bride {
+      border-color: #E7629C;
+      .card-header, .card-footer {
+        background-color: #E7629C;
+        color: #fff;
+      }
+      .card-title {
+        margin-bottom: 0;
+      }
+    }
+    &.card-groom {
+      border-color: #629ce7;
+      .card-header, .card-footer {
+        background-color: #629ce7;
+        color: #fff;
+      }
+      .card-title {
+        margin-bottom: 0;
+      }
+    }
+    &.card-maid-of-honor, &.card-bridesmaid {
+      border-color: #f3b0cd;
+      .card-header, .card-footer {
+        background-color: #f3b0cd;
+      }
+    }
+    &.card-best-man, &.card-groomsman, &.card-junior-groomsman, &.card-ring-bearer {
+      border-color: #b0cdf3;
+      .card-header, .card-footer {
+        background-color: #b0cdf3;
+      }
+    }
+  }
+}
+
+#form_rsvp {
+  .card-header, .col-form-label {
+    font-weight: bold;
+  }
+}
+
+@import "timeline";

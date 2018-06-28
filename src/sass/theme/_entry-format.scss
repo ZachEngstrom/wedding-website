@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+11.8 Entry Format
+--------------------------------------------------------------*/
+
+.entry-format {
+  color: #fff;
+}
+
+.entry-format-icon {
+  background: $color-dk-purple;
+  bottom: -25px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 6px #ffffff;
+  box-shadow: 0 0 0 6px #ffffff;
+  color: #fff;
+  font-size: 25px;
+  line-height: 55px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  z-index: 4;
+  -webkit-transition: background .5s ease;
+  -moz-transition: background .5s ease;
+  -ms-transition: background .5s ease;
+  -o-transition: background .5s ease;
+  transition: background .5s ease;
+}
+
+a.entry-format-icon {
+  background: $color-dk-purple;
+  bottom: -25px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 6px #ffffff;
+  box-shadow: 0 0 0 6px #ffffff;
+  color: #fff;
+  font-size: 25px;
+  line-height: 55px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 55px;
+  height: 55px;
+  z-index: 4;
+  -webkit-transition: background .5s ease;
+  -moz-transition: background .5s ease;
+  -ms-transition: background .5s ease;
+  -o-transition: background .5s ease;
+  transition: background .5s ease;
+  &:visited {
+    background: $color-dk-purple;
+    bottom: -25px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 6px #ffffff;
+    box-shadow: 0 0 0 6px #ffffff;
+    color: #fff;
+    font-size: 25px;
+    line-height: 55px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    z-index: 4;
+    -webkit-transition: background .5s ease;
+    -moz-transition: background .5s ease;
+    -ms-transition: background .5s ease;
+    -o-transition: background .5s ease;
+    transition: background .5s ease;
+  }
+}
+
+.entry-format-icon:hover, a.entry-format-icon:hover {
+  background: #fff;
+  color: $color-dk-purple;
+}
+
+.entry-format-icon {
+  &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+a.entry-format-icon {
+  &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.entry-format-icon > i {}

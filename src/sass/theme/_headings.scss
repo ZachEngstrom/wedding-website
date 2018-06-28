@@ -1,0 +1,17 @@
+/*--------------------------------------------------------------
+2.2 Headings
+--------------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.1;
+}
+
+h5 {
+  -webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+}
+
+h6 {
+  -webkit-text-stroke: .35px; /* Hack to fix thin text in Windows */
+}

@@ -1,0 +1,147 @@
+/*--------------------------------------------------------------
+5.1 Site Navigation
+--------------------------------------------------------------*/
+
+/* Site navigation */
+
+.main-navigation {
+  margin-bottom: 2rem;
+}
+
+.menu-toggle-wrapper {
+  display: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* Navigation Archives */
+
+.pagination {
+  font-size: 0px;
+  margin: 15px 0 30px;
+  overflow: hidden;
+  text-align: center;
+  .page-numbers {
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin: 2px 1px;
+    padding: 18px 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    &:hover {
+      background: $color-dk-purple;
+      color: #fff;
+    }
+  }
+  .current.page-numbers {
+    background: $color-dk-purple;
+    color: #fff;
+    font-weight: 700;
+  }
+  .prev.page-numbers:before, .next.page-numbers:after {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+  .prev.page-numbers:before {
+    content: "\f053";
+    font-family: 'FontAwesome';
+  }
+  .next.page-numbers:after {
+    content: "\f054";
+    font-family: 'FontAwesome';
+  }
+}
+
+/* Navigation Post */
+
+.post-navigation {
+  .nav-previous .meta-nav {
+    padding: 0 5px 0 0;
+  }
+  .nav-next .meta-nav {
+    padding: 0 0 0 5px;
+  }
+}
+
+/* Navigations */
+
+.site-main {
+  .comment-navigation, .post-navigation, .image-navigation {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
+}
+
+.comment-navigation .nav-previous, .post-navigation .nav-previous, .image-navigation .nav-previous {
+  float: left;
+  width: 40%;
+}
+
+.comment-navigation .nav-next, .post-navigation .nav-next, .image-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 40%;
+}
+
+.comment-navigation .nav-previous a, .post-navigation .nav-previous a, .image-navigation .nav-previous a, .comment-navigation .nav-next a, .post-navigation .nav-next a, .image-navigation .nav-next a {
+  padding: 6px 18px;
+  text-align: center;
+  border: 1px solid $color-dk-purple;
+  border-radius: 4px;
+  display: block;
+  &:visited {
+    padding: 6px 18px;
+    text-align: center;
+    border: 1px solid $color-dk-purple;
+    border-radius: 4px;
+    display: block;
+  }
+}
+
+.comment-navigation .nav-previous a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.post-navigation .nav-previous a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.image-navigation .nav-previous a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.comment-navigation .nav-next a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.post-navigation .nav-next a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}
+
+.image-navigation .nav-next a {
+  &:hover, &:focus, &:active {
+    background: $color-dk-purple;
+    color: #fff;
+  }
+}

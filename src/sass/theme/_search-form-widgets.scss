@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+10.1 Search Form Widget
+--------------------------------------------------------------*/
+
+form.search-form {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.content-area form.search-form {
+  margin-bottom: 30px;
+}
+
+form.search-form {
+  input {
+    &[type="search"] {
+      padding: 12px 8px;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  }
+  &:before {
+    content: "\f002";
+    font-family: 'FontAwesome';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 5px;
+    width: 30px;
+    font-size: 14px;
+    padding: 12px 0;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  button[type="submit"] {
+    cursor: pointer;
+    padding: .25rem .75rem .375rem;
+  }
+}
