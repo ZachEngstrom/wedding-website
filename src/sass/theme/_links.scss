@@ -21,4 +21,10 @@ a {
       color: #fff;
     }
   }
+  img {
+    transition: transform .33s;
+    &:hover, &:focus, &:active {
+      transform: scale(1.025);
+    }
+  }
 }
