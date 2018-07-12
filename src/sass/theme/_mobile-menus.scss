@@ -61,11 +61,11 @@
 /** Menu */
 
 .slicknav-nav {
-  background: #333333;
+  background: $color-dk-purple;
   color: #fff;
   margin: 0;
   padding: 10px 0;
-  font-size: 0.875em;
+  font-size: 1em;
   list-style: none;
   overflow: hidden;
   ul {
@@ -79,10 +79,11 @@
     margin: 2px 5px;
   }
   a {
-    padding: 5px 10px;
-    margin: 2px 5px;
+    padding: .8125rem;
+    margin: 2px 0;
     text-decoration: none;
-    color: #fff;
+    color: #b2b2b2;
+    font-weight: bold;
   }
   .slicknav-item {
     a {
@@ -93,16 +94,13 @@
       -webkit-border-radius: 6px;
       -moz-border-radius: 6px;
       border-radius: 6px;
-      background: #ccc;
+      background: #b2b2b2;
       color: #fff;
     }
   }
   a:hover {
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    background: #ccc;
-    color: #222;
+    background: #b2b2b2;
+    color: $color-dk-purple;
   }
   .slicknav-txtnode {
     margin-left: 15px;
