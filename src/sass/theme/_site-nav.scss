@@ -12,6 +12,11 @@
   display: none;
   padding: 0;
   text-align: center;
+  a {
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 /* Navigation Archives */
