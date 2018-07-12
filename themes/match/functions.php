@@ -57,6 +57,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/html-minifier.php';
 
 /**
+ * Image Class
+ */
+require get_template_directory() . '/inc/image-class.php';
+
+/**
  * Custom Meta Boxes
  */
 require get_template_directory() . '/inc/metabox-fullwidth.php';
