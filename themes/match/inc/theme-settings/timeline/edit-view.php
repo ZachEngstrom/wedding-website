@@ -12,7 +12,7 @@ if (isset($_GET['edit-item'])) {
 	foreach( $wpdb->get_results('SELECT * FROM `'.$dbTableTimelineEditView.'` WHERE `id` = '.$_GET['edit-item']) as $timeline_key => $db_timeline_row) {
 		$db_timeline_id    = $db_timeline_row->id;
 		$db_timeline_date  = $db_timeline_row->date;
-		$db_timeline_title = $db_timeline_row->title;
+		$db_timeline_title = stripslashes($db_timeline_row->title);
 		$db_timeline_story = $db_timeline_row->story;
 		$db_timeline_date  = date("Y-m-d", substr($db_timeline_date, 0, 10));
 	}

@@ -31,7 +31,7 @@
 			echo '
 				<tr'.$updatedClass.'>
 					<td class="text-center">'.date("M\. j\, Y", substr($row->date, 0, 10)).'</td>
-					<td>'.$row->title.'</td>
+					<td>'.stripslashes($row->title).'</td>
 					<td>'.html_entity_decode(stripslashes(wpautop($row->story))).'</td>
 					<td class="text-center"><a href="'.get_admin_url().'admin.php?page=timeline&edit-item='.$row->id.'" class="button button-primary"><span class="dashicons dashicons-edit"></span></a></td>
 				</tr>

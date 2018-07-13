@@ -41,7 +41,7 @@ function match_shortcode_timeline($atts, $content = null) {
 				<div class='".$timelineItemClass."'>
 					<div class='content'>
 						".$timelineItemDate."
-						".$timelineItemTitle."
+						".stripslashes($timelineItemTitle)."
 						".str_replace(array('&lt;','&gt;','&quot;'), array('<','>','"'),stripslashes(wpautop($row->story)))."
 					</div>
 				</div>
