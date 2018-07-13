@@ -64,6 +64,7 @@ require get_template_directory() . '/inc/image-class.php';
 /**
  * Custom Meta Boxes
  */
+require get_template_directory() . '/inc/metabox-description.php';
 require get_template_directory() . '/inc/metabox-fullwidth.php';
 require get_template_directory() . '/inc/metabox-h1.php';
 
