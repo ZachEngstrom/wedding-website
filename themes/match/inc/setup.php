@@ -87,3 +87,13 @@ add_filter('the_generator', 'match_remove_version');
 
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
+
+// admin link for All Settings if user is an admin
+global $current_user;
+get_currentuserinfo();
+if ($current_user->roles[0] == 'administrator') {
+	function all_settings_link() {
+		add_options_page(__('All Settings'), __('All Settings'), 'administrator', 'options.php');
+	}
+	add_action('admin_menu', 'all_settings_link');
+}
