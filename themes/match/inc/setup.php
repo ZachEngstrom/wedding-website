@@ -84,3 +84,6 @@ function match_remove_version() {
 	return '';
 }
 add_filter('the_generator', 'match_remove_version');
+
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
