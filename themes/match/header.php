@@ -13,6 +13,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php
+$description_box_value = get_post_meta( get_the_ID(), 'descriptionBox', true );
+if (!isset($description_box_value) || $description_box_value == '') {
+ // do nothingget_the_excerpt
+//echo '<meta name="description" content="'.get_the_excerpt().'">';
+	if(is_singular()) {       
+        global $wp_query;
+        $post = $wp_query->post;
+        $page_id = $post->ID;
+        $page_object = get_page( $page_id );
+		$content = wp_trim_words($page_object->post_content,300);
+		$content = preg_replace_callback(
+			"/\[.*?\]/",
+			function($matches){
+				foreach($matches as $match){
+					return '';
+				}
+			}, 
+			$content
+		);
+		if (!empty($content)){
+			$output="<meta name='description' content='".$content."'>";
+			echo $output;
+		}
+    }
+} else {
+echo '<meta name="description" content="'.$description_box_value.'">';
+}
+?>
 
 <?php wp_head(); ?>
 </head>
