@@ -53,22 +53,36 @@ if (is_single()) {
 						<?php endif;
 
 						if (get_option('wedding_date_time_epoch') != '') { // if option wedding_date_time_epoch is set, echo weddingCountdown string
-							$remaining = get_option('wedding_date_time_epoch') - time();
-							$days_remaining = floor($remaining / 86400);
-							$hours_remaining = floor(($remaining % 86400) / 3600);
-							if ($hours_remaining == 0) { // if hours_remaining is 0, set it to blank
-								$hours_remaining = '';
-							} else if ($hours_remaining == 1) { // if hours_remaining is 1, say "hour"
-								$hours_remaining = ' and '.$hours_remaining.' hour';
-							} else { // if hours_remaining > 1, say "hours"
-								$hours_remaining = ' and '.$hours_remaining.' hours';
-							}
-							if ($days_remaining < 1) { // if days_remaining < 1, today is the big day!
-								$weddingCountdown = '<span class="display-4">Today is the <span class="font-weight-bold text-uppercase">big day</span>!!!</span>';
-							} else { // if days_remaining < 1, today is the big day!
-								$weddingCountdown = 'There are '.$days_remaining.' days '.$hours_remaining.' left until the wedding!';
-							}
-							echo '<p class="h5 wedding-countdown">'.$weddingCountdown.'</p>';
+
+							$date1 = date_create(date("Y/m/d H:i:s")); // current date and time
+							$dateEndFromDB = date("Y-m-d H:i:s", substr(get_option('wedding_date_time_epoch'), 0, 10)); // get epoch date from database and format it for date_diff()
+							$date2 = date_create($dateEndFromDB); // date and time of event
+							$diff = date_diff($date1,$date2); // diff date1 and date2
+							// if year > 1 = years, if year == 1 = year, if year < 1 = [blank]
+							$year = $diff->y == '1' ? $diff->y.' year ' : $diff->y.' years ';
+							$year = $year == '0 years ' ? '' : $year;
+							// if month > 1 = months, if month == 1 = month, if month < 1 = [blank]
+							$month = $diff->m == '1' ? $diff->m.' month ' : $diff->m.' months ';
+							$month = $month == '0 months ' ? '' : $month;
+							// if day > 1 = days, if day == 1 = day, if day < 1 = [blank]
+							$day = $diff->d == '1' ? $diff->d.' day ' : $diff->d.' days ';
+							$day = $day == '0 days ' ? '' : $day;
+							// if hour > 1 = hours, if hour == 1 = hour, if hour < 1 = [blank]
+							$hour = $diff->h == '1' ? $diff->h.' hour ' : $diff->h.' hours ';
+							$hour = $hour == '0 hours ' ? '' : $hour;
+							// if min > 1 = minutes, if min == 1 = minute, if min < 1 = [blank]
+							$min = $diff->i == '1' ? $diff->i.' minute ' : $diff->i.' minutes ';
+							$min = $min == '0 minutes ' ? '' : $min;
+							// put it all together
+							$timeString = $year . $month . $day . $hour /*. $min*/;
+							// if time left starts with > 1 then "There are ", if time left starts with 1 then "There is "
+							$sentanceStart = $timeString[0] > 1 ? 'There are ' : 'There is ';
+
+							// If before event = countdown, if after event = time since
+							$eventTimeString = $diff->invert == '0' ? '<p class="wedding-countdown">'.$sentanceStart.'<strong>'.$timeString.'</strong> until the wedding!</p>' : '<p>It\'s been <strong>'.$timeString.'</strong> since the wedding.';
+							// output
+							echo $eventTimeString;
+
 						}
 
 						?>
