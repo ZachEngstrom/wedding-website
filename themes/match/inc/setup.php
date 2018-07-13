@@ -78,3 +78,9 @@ function match_setup() {
 }
 endif; // match_setup
 add_action( 'after_setup_theme', 'match_setup' );
+
+// Remove WordPress version from meta tags
+function match_remove_version() {
+	return '';
+}
+add_filter('the_generator', 'match_remove_version');
