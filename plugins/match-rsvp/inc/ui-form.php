@@ -5,7 +5,6 @@ if (!function_exists('match_rsvp_ui_form')) {
 
 		?>
 		<style><?php include_once plugin_dir_path( __FILE__ ) . "../css/ui-rsvp.css"; ?></style>
-		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
 		<div class="alert alert-danger text-center" id="formError" role="alert"></div>
 		<form id="match_rsvp_form" name="match_rsvp_form" onsubmit="return formValFunc()" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
 
