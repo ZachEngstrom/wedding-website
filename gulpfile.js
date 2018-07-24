@@ -80,6 +80,7 @@ gulp.task('scripts', function(){
 
 gulp.task('scripts_libs', function(){
   return gulp.src([
+      folder.src_js+'bootstrap.js',
       folder.src_js+'hover-intent.js',
       folder.src_js+'superfish.js',
       folder.src_js+'slicknav.js',
