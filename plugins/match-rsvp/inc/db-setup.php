@@ -3,6 +3,7 @@
 /**
  * Create the RSVP table if it doesn't exist
  **/
+global $wpdb;
 $rsvp_table_name = $wpdb->prefix.'rsvpform';
 if($wpdb->get_var("SHOW TABLES LIKE '$rsvp_table_name'") != $rsvp_table_name) {
 	//table not in database. Create new table
