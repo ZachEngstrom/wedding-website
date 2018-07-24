@@ -52,7 +52,7 @@ if (!function_exists('match_form_code')) {
 			</div>
 			<div class="row">
 				<div class="col">
-					<label for="answerNumber">Captcha</label>
+					<label for="answerNumber">Prove you are human</label>
 				</div>
 			</div>
 			<div class="row mb-md-4 captcha">
