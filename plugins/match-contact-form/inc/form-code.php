@@ -40,7 +40,7 @@ if (!function_exists('match_form_code')) {
 					<select class="custom-select" id="reason" name="reason" onchange="reasonValueFunc()">
 						<option value="" <?php echo $selectedReason_null; ?>>-- Select --</option>
 						<option value="guestbook" <?php echo $selectedReason_guestbook; ?>>I want to sign the guestbook</option>
-						<option value="other" <?php echo $selectedReason_other; ?>>Other</option>
+						<option value="other" <?php echo $selectedReason_other; ?>>Comment/Question</option>
 					</select>
 				</div>
 			</div>
