@@ -4,6 +4,7 @@ if (!function_exists('match_rsvp_ui_form')) {
 	function match_rsvp_ui_form() {
 
 		?>
+		<h2 id="thanks">Thank You!</h2>
 		<style><?php include_once plugin_dir_path( __FILE__ ) . "../css/ui-rsvp.css"; ?></style>
 		<div class="alert alert-danger text-center" id="formError" role="alert"></div>
 		<form id="match_rsvp_form" name="match_rsvp_form" onsubmit="return formValFunc()" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
@@ -36,21 +37,21 @@ if (!function_exists('match_rsvp_ui_form')) {
 								</div>
 								<div class="col-md-6 mb-3 mb-md-0">
 									<label for="attending">Attending?</label>
-									<select class="custom-select" id="attending" name="attending" onchange="attendingValueFunc()">
+									<select class="custom-select" id="attending" name="attending">
 										<option value="" <?php echo $selected_attending_null; ?>>-- Select --</option>
-										<option value="yes" <?php echo $selected_attending_guestbook; ?>>Yes!</option>
-										<option value="no" <?php echo $selected_attending_other; ?>>No, sorry.</option>
+										<option value="1" <?php echo $selected_attending_guestbook; ?>>Yes!</option>
+										<option value="0" <?php echo $selected_attending_other; ?>>No, sorry.</option>
 									</select>
 								</div>
-								<div class="col-md-12 mb-3 mb-md-0 d-none" id="mealChoiceWrapper">
+								<div class="col-md-12 mb-3 mb-md-0 mt-md-4 d-none" id="mealChoiceWrapper">
 									<label for="mealChoice">Meal Choice?</label>
 									<select class="custom-select" id="mealChoice" name="mealChoice">
 										<option value="" <?php echo $selected_mealchoice_null; ?>>-- Select --</option>
-										<option value="chx" <?php echo $selected_mealchoice_chx; ?>>Chx</option>
-										<option value="beef" <?php echo $selected_mealchoice_beef; ?>>Beef</option>
-										<option value="kids" <?php echo $selected_mealchoice_kids; ?>>Kids</option>
+										<option value="1" <?php echo $selected_mealchoice_chx; ?>>Asiago Chicken</option>
+										<option value="2" <?php echo $selected_mealchoice_beef; ?>>Roast Beef</option>
+										<option value="3" <?php echo $selected_mealchoice_kids; ?>>Kids Meal</option>
 									</select>
-									<small class="text-muted">* Gluten free & vegetarian options are available upon request - please indicate preferences in the "Notes" area</small>
+									<small class="text-muted">* Gluten free &amp; vegetarian options are available upon request - please use the form on the "Contact Us" page to let us know about your gluten free or vegetarian needs.</small>
 								</div>
 							</div>
 						</div>
@@ -61,13 +62,14 @@ if (!function_exists('match_rsvp_ui_form')) {
 					</div>
 				</div>
 			</div>
+
 			<div class="row">
 				<div class="col d-none" id="guestTableWrapper">
-					<table class="table table-sm table-bordered table-striped mb-4" id="guestTable">
+					<table class="table table-sm table-bordered mb-4" id="guestTable">
 						<thead>
 							<tr>
 								<th>Guest</th>
-								<th>Primary Email</th>
+								<th>Primary Contact's Email</th>
 								<th>Attending?</th>
 								<th>Meal Choice?</th>
 							</tr>
@@ -76,24 +78,24 @@ if (!function_exists('match_rsvp_ui_form')) {
 						</tbody>
 					</table>
 				</div>
-				<div class="col-12 sr-only" id="guestList">
+				<div class="col-12 d-none" id="guestList">
 					<label for="totalGuestNum" id="messageLabel">Total Guest Count</label>
 					<input class="form-control" id="totalGuestNum" name="totalGuestNum" value="">
 				</div>
 			</div>
 
-			<button type="button" class="btn btn-secondary mt-0 mb-3" data-toggle="modal" data-target=".modal-add-guest" id="btnAddGuest">Add Guest</button>
+			<button type="button" class="btn btn-secondary mt-0 mb-3" data-toggle="modal" data-target=".modal-add-guest" id="btnAddGuest">Add Individual Response</button>
 
 			<div class="row mb-md-4">
 				<div class="col mb-3 mb-md-0">
-					<label for="message" id="messageLabel" class="mb-0">Song Requests</label>
+					<label for="songRequest" id="songRequestLabel" class="mb-0">Song Requests</label>
 					<div class="text-muted mb-2"><strong>Example:</strong> Artist - Title, Artist - Title, Artist - Title</div>
-					<textarea class="form-control" id="message" name="message" rows="3"><?php echo $message; ?></textarea>
+					<textarea class="form-control" id="songRequest" name="songRequest" rows="3"><?php echo $songRequest; ?></textarea>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<label for="answerNumber">Prove you are human to prevent spam</label>
+					<label for="answerNumber">Prove you are human</label>
 				</div>
 			</div>
 			<div class="row mb-md-4 captcha">
@@ -109,6 +111,7 @@ if (!function_exists('match_rsvp_ui_form')) {
 			</div>
 			<button type="submit" name="match-rsvp-submit" id="match-rsvp-submit" class="btn btn-secondary">Submit</button>
 		</form>
+		<p id="cta" class="lead mt-3">Please consider sharing your advice and encouragement in our <a href="/contact-us/?reason=guestbook" target="_blank">guestbook</a>!</p>
 		<script><?php include_once plugin_dir_path( __FILE__ ) . "../js/ui-rsvp.min.js"; ?></script>
 
 		<?php
