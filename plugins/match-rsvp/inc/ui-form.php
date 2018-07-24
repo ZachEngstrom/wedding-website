@@ -39,8 +39,8 @@ if (!function_exists('match_rsvp_ui_form')) {
 									<label for="attending">Attending?</label>
 									<select class="custom-select" id="attending" name="attending">
 										<option value="" <?php echo $selected_attending_null; ?>>-- Select --</option>
-										<option value="1" <?php echo $selected_attending_guestbook; ?>>Yes!</option>
-										<option value="0" <?php echo $selected_attending_other; ?>>No, sorry.</option>
+										<option value="1" <?php echo $selected_attending_guestbook; ?>>Can't Wait!</option>
+										<option value="0" <?php echo $selected_attending_other; ?>>Celebrating from afar</option>
 									</select>
 								</div>
 								<div class="col-md-12 mb-3 mb-md-0 mt-md-4 d-none" id="mealChoiceWrapper">
