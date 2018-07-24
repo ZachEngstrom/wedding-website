@@ -42,7 +42,7 @@ date_default_timezone_set('America/Chicago');
 										<td class="email column-status" data-colname="Status">'.$approvedStatus.'</td>
 										<td class="email column-email" data-colname="Email">'.$guestbookResult->email.'</td>
 										<td class="role column-role" data-colname="Date">'.date("Y-m-d g:ia", substr($guestbookResult->date, 0, 10)).'</td>
-										<td class="posts column-posts" data-colname="Message">'.substr($guestbookResult->message,0,160).'...</td>
+										<td class="posts column-posts" data-colname="Message">'.stripslashes(substr($guestbookResult->message,0,160)).'...</td>
 										<td class="posts column-posts" data-colname="View"><a href="'.get_admin_url().'admin.php?page=match-guestbook-form.php&view='.$guestbookResult->id.'" class="button button-primary"><span class="dashicons dashicons-visibility"></span></a></td>
 									</tr>
 								';
