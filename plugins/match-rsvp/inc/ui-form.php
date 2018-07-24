@@ -3,24 +3,7 @@
 if (!function_exists('match_rsvp_ui_form')) {
 	function match_rsvp_ui_form() {
 
-		$firstName = isset($_GET['firstName']) ? $_GET['firstName'] : '';
-		$lastName  = isset($_GET['lastName']) ? $_GET['lastName'] : '';
-		$email     = isset($_GET['primary_email']) ? $_GET['primary_email'] : '';
-		$message   = isset($_GET['message']) ? $_GET['message'] : '';
-		$attending    = isset($_GET['attending']) ? $_GET['attending'] : '';
-		$mealChoice    = isset($_GET['mealChoice']) ? $_GET['mealChoice'] : '';
-
-		$selected_attending_null = ($attending == "") ? "selected" : "";
-		$selected_attending_yes = ($attending == "yes") ? "selected" : "";
-		$selected_attending_no = ($attending == "no") ? "selected" : "";
-
-		$selected_mealchoice_null = ($mealChoice == "") ? "selected" : "";
-		$selected_mealchoice_chx = ($mealChoice == "chx") ? "selected" : "";
-		$selected_mealchoice_beef = ($mealChoice == "beef") ? "selected" : "";
-		$selected_mealchoice_kids = ($mealChoice == "kids") ? "selected" : "";
-
 		?>
-
 		<style><?php include_once plugin_dir_path( __FILE__ ) . "../css/ui-rsvp.css"; ?></style>
 		<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
 		<div class="alert alert-danger text-center" id="formError" role="alert"></div>
