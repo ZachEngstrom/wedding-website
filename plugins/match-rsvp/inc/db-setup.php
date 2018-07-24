@@ -14,7 +14,6 @@ if($wpdb->get_var("SHOW TABLES LIKE '$rsvp_table_name'") != $rsvp_table_name) {
 			`firstName`     varchar(255) NOT NULL,
 			`lastName`      varchar(255) NOT NULL,
 			`primary_email` varchar(255) NOT NULL,
-			`message`       text NOT NULL,
 			`party_total`   int(20) NOT NULL,
 			`attending`     int(20) NOT NULL,
 			`food_choice`   varchar(255) NOT NULL,

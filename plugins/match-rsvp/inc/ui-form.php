@@ -104,12 +104,6 @@ if (!function_exists('match_rsvp_ui_form')) {
 
 			<div class="row mb-md-4">
 				<div class="col mb-3 mb-md-0">
-					<label for="message" id="messageLabel">Notes</label>
-					<textarea class="form-control" id="message" name="message" rows="3"><?php echo $message; ?></textarea>
-				</div>
-			</div>
-			<div class="row mb-md-4">
-				<div class="col mb-3 mb-md-0">
 					<label for="message" id="messageLabel" class="mb-0">Song Requests</label>
 					<div class="text-muted mb-2"><strong>Example:</strong> Artist - Title, Artist - Title, Artist - Title</div>
 					<textarea class="form-control" id="message" name="message" rows="3"><?php echo $message; ?></textarea>
