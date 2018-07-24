@@ -1,3 +1,110 @@
-.admin-test {
-	display:none;
+table.wp-list-table {
+	@media screen and (max-width: 782px) {
+		.mobile {
+			display: block !important;
+		}
+		.desktop {
+			display: none;
+		}
+		tr:not(.inline-edit-row):not(.no-items) td.column-primary~td:not(.check-column):empty {
+			display:none !important;
+		}
+		.button {
+			padding: 4px 7px;
+		}
+	}
+	.mobile {
+		display: none;
+	}
+	&.striped {
+		tbody {
+			tr {
+				&.unread {
+					font-weight: bold;
+					background-color: rgba(0,115,170,.25);
+					&:hover {
+						font-weight: bold;
+						background-color: rgba(0,115,170,.3);
+					}
+				}
+				&:hover {
+					background-color: rgba(0,0,0,.08);
+				}
+			}
+			.dashicons-thumbs-down {
+				color: #DC3232;
+			}
+			.dashicons-thumbs-up {
+				color: #46B450;
+			}
+			.dashicons-clock {
+				color: #00A0D2;
+			}
+		}
+	}
+	.column-username img {
+		padding-bottom: .5rem;
+	}
+}
+
+a>.dashicons,button>.dashicons {
+    padding: .2rem 0;
+}
+
+#indMSG {
+	&>.button-row form~.button, &>.button-row .button~form {
+		margin-left: 1rem;
+		float: right;
+	}
+	.button-green {
+		background: #3fa248;
+		border-color: #389040 #317d38 #317d38;
+		box-shadow: 0 1px 0 #317d38;
+		text-shadow: 0 -1px 1px #317d38, 1px 0 1px #317d38, 0 1px 1px #317d38, -1px 0 1px #317d38;
+		&:hover, &:focus, &:active {
+			background: #46b450;
+			border-color: #389040 #317d38 #317d38;
+			box-shadow: 0 1px 0 #317d38;
+		}
+	}
+	.button-red {
+		background: #dc3232;
+		border-color: #c62d2d #b02828 #b02828;
+		box-shadow: 0 1px 0 #b02828;
+		text-shadow: 0 -1px 1px #b02828, 1px 0 1px #b02828, 0 1px 1px #b02828, -1px 0 1px #b02828;
+		&:hover, &:focus, &:active {
+			background: #df4646;
+			border-color: #c62d2d #b02828 #b02828;
+			box-shadow: 0 1px 0 #b02828;
+		}
+	}
+	h3 {
+		strong {
+			width: 3.25rem;
+			display: inline-block;
+		}
+		span {
+			font-weight: normal
+		}
+	}
+	.dashicons-thumbs-down {
+		color: #DC3232;
+	}
+	.dashicons-thumbs-up {
+		color: #46B450;
+	}
+	.dashicons-clock {
+		color: #00A0D2;
+	}
+	.button {
+		.dashicons-thumbs-down {
+			color: #fff;
+		}
+		.dashicons-thumbs-up {
+			color: #fff;
+		}
+		.dashicons-clock {
+			color: #fff;
+		}
+	}
 }
